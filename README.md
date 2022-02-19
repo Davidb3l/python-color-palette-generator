@@ -1,6 +1,6 @@
 # Video frame color palette generator
 
-A Python based program, which consists of a VLC player instance, that can generate color palettes for a specified number of video frames and ultimately combine them into a final color palette group image. (See the visual example below)
+Modified to extract a specific frame by timestamp.
 
 ![Screenshot](https://gauracs.me/wp-content/uploads/2020/12/color_palette_generator_frame.jpg)
 
@@ -12,20 +12,17 @@ A Python based program, which consists of a VLC player instance, that can genera
 In order to run this program, several Python packages must be installed first using pip and Homebrew:
 
 ```
-pip install python-vlc
-brew install pyqt@4
 pip install matplotlib
 pip install numpy
 pip install scikit-learn
 pip install opencv-python
 ```
 
-**Note:** This project is using the 4th version of PyQt - PyQt4, because this project is built on top of the existing [PyQt VLC player instance example](https://github.com/oaubert/python-vlc/blob/master/examples/qtvlc.py), which uses PyQt4 specifically.
-
 ### Run the program
+Example command:
 
 ```
-python main.py
+python .\main.py --vid sample.mp4 --frame 00:01:00  
 ```
 
 ## License
